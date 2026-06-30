@@ -1,0 +1,129 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const dificultades = [
+  {
+    icon: 'lucide:book-open',
+    title: 'Dislexia y problemas de lectura',
+    description: 'Evaluación e intervención especializada para superar dificultades en la lectura'
+  },
+  {
+    icon: 'lucide:pen-tool',
+    title: 'Disgrafía y escritura',
+    description: 'Tratamiento de trastornos de la escritura y grafomotricidad'
+  },
+  {
+    icon: 'lucide:mic',
+    title: 'Dislalia y pronunciación',
+    description: 'Terapia de habla para corregir errores articulatorios'
+  },
+  {
+    icon: 'lucide:calculator',
+    title: 'Discalculia y matemáticas',
+    description: 'Apoyo en dificultades numéricas y razonamiento matemático'
+  },
+  {
+    icon: 'lucide:brain',
+    title: 'Dificultades de atención',
+    description: 'Intervención en procesos atencionales relacionados con el aprendizaje'
+  },
+  {
+    icon: 'lucide:message-circle',
+    title: 'Retraso del lenguaje',
+    description: 'Estimulación temprana y desarrollo del lenguaje oral'
+  }
+];
+
+const habilidades = [
+  {
+    icon: 'lucide:message-square',
+    title: 'Desarrollo del lenguaje',
+    description: 'Estimulación avanzada de habilidades comunicativas'
+  },
+  {
+    icon: 'lucide:mic-2',
+    title: 'Expresión oral',
+    description: 'Potenciación de la fluidez y claridad del habla'
+  },
+  {
+    icon: 'lucide:lightbulb',
+    title: 'Pensamiento crítico',
+    description: 'Desarrollo de estrategias de razonamiento y análisis'
+  },
+  {
+    icon: 'lucide:book-open',
+    title: 'Lectoescritura',
+    description: 'Fortalecimiento integral de lectura y escritura'
+  },
+  {
+    icon: 'lucide:users',
+    title: 'Habilidades sociales',
+    description: 'Comunicación efectiva en contextos escolares y sociales'
+  },
+  {
+    icon: 'lucide:graduation-cap',
+    title: 'Preparación académica',
+    description: 'Acompañamiento en transiciones escolares y universitarias'
+  }
+];
+---
+
+<section id="servicios" class="section-padding bg-white">
+  <div class="container-empiria">
+    
+    <!-- BLOQUE A: Dificultades -->
+    <div class="mb-24">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[#C17A5F] text-sm font-semibold uppercase tracking-wider">Intervención</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#2D3748] mt-3 mb-6">
+          Dificultades que Atendemos
+        </h2>
+        <p class="text-[#718096] text-lg">
+          Abordaje terapéutico especializado y basado en evidencia para superar barreras en el aprendizaje y la comunicación.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {dificultades.map(item => (
+          <div class="bg-white border border-[#C17A5F]/20 rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div class="w-14 h-14 bg-[#C17A5F]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#C17A5F] transition-colors duration-300">
+              <Icon name={item.icon} class="w-7 h-7 text-[#C17A5F] group-hover:text-white transition-colors duration-300" />
+            </div>
+            <h3 class="text-xl font-bold text-[#2D3748] mb-3">{item.title}</h3>
+            <p class="text-[#718096] leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- BLOQUE B: Habilidades -->
+    <div class="bg-[#F5F0E8] rounded-[40px] p-8 md:p-16">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[#7C9A6B] text-sm font-semibold uppercase tracking-wider">Potenciación</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#2D3748] mt-3 mb-6">
+          Habilidades que Potenciamos
+        </h2>
+        <p class="text-[#718096] text-lg">
+          Desarrollamos herramientas fundamentales para el éxito académico y social de tu hijo.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {habilidades.map(item => (
+          <div class="bg-white rounded-2xl p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+            <div class="w-14 h-14 bg-[#7C9A6B]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#7C9A6B] transition-colors duration-300">
+              <Icon name={item.icon} class="w-7 h-7 text-[#7C9A6B] group-hover:text-white transition-colors duration-300" />
+            </div>
+            <h3 class="text-xl font-bold text-[#2D3748] mb-3">{item.title}</h3>
+            <p class="text-[#718096] leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
