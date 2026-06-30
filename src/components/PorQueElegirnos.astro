@@ -1,0 +1,79 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const diferenciadores = [
+  {
+    icon: 'lucide:user-check',
+    title: 'Atención 100% individualizada',
+    description: 'Cero terapias grupales. Enfoque exclusivo en el ritmo y necesidades de tu hijo'
+  },
+  {
+    icon: 'lucide:home',
+    title: 'Acompañamiento a padres',
+    description: 'Entregamos estrategias claras y prácticas para reforzar los avances diarios en casa'
+  },
+  {
+    icon: 'lucide:trending-up',
+    title: 'Resultados tangibles',
+    description: 'Evaluaciones rigurosas e intervenciones basadas en evidencia científica que transforman el desempeño escolar'
+  },
+  {
+    icon: 'lucide:monitor',
+    title: 'Presencial y online',
+    description: 'Atención en consultorio y terapia virtual con la misma calidad y calidez'
+  }
+];
+
+const estadisticas = [
+  { valor: '15+', texto: 'Años de experiencia' },
+  { valor: '500+', texto: 'Familias apoyadas' },
+  { valor: '98%', texto: 'De satisfacción' }
+];
+---
+
+<section id="por-que-elegirnos" class="section-padding bg-[#FAFAF8] relative overflow-hidden">
+  <!-- Decoración -->
+  <div class="absolute top-0 right-0 w-64 h-64 bg-[#7C9A6B]/5 rounded-full blur-3xl -z-10"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#C17A5F]/5 rounded-full blur-3xl -z-10"></div>
+
+  <div class="container-empiria">
+    
+    <!-- Estadísticas (Franja Superior) -->
+    <div class="bg-white rounded-[32px] shadow-sm border border-[#7C9A6B]/10 p-8 md:p-12 mb-20 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-[#7C9A6B]/10">
+        {estadisticas.map(stat => (
+          <div class="pt-6 md:pt-0 first:pt-0">
+            <p class="text-4xl md:text-5xl font-serif font-bold text-[#C17A5F] mb-2">{stat.valor}</p>
+            <p class="text-[#718096] font-medium">{stat.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Título -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-[#7C9A6B] text-sm font-semibold uppercase tracking-wider">Por Qué Elegirnos</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#2D3748] mt-3">
+        La diferencia de un abordaje humano y científico
+      </h2>
+    </div>
+
+    <!-- Diferenciadores -->
+    <div class="grid md:grid-cols-2 gap-8">
+      {diferenciadores.map(diff => (
+        <div class="bg-white p-8 rounded-[24px] shadow-sm border border-[#7C9A6B]/10 hover:border-[#7C9A6B]/30 hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row gap-6">
+          <div class="w-16 h-16 bg-[#7C9A6B]/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <Icon name={diff.icon} class="w-8 h-8 text-[#7C9A6B]" />
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#2D3748] mb-3">{diff.title}</h3>
+            <p class="text-[#718096] leading-relaxed">
+              {diff.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
