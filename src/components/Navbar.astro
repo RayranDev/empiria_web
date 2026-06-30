@@ -1,0 +1,74 @@
+---
+const navLinks = [
+  { href: '#inicio', label: 'Inicio' },
+  { href: '#quienes-somos', label: 'Quiénes Somos' },
+  { href: '#servicios', label: 'Servicios' },
+  { href: '#por-que-elegirnos', label: 'Por Qué Elegirnos' },
+  { href: '#a-quienes-atendemos', label: 'A Quiénes Atendemos' },
+  { href: '#metodologia', label: 'Metodología' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#FAFAF8]/90 backdrop-blur-md border-b border-[#7C9A6B]/10">
+  <div class="container-empiria flex items-center justify-between h-20">
+    <!-- Logo -->
+    <a href="#inicio" class="text-2xl font-serif font-bold text-[#2D3748]">
+      Empiria
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-8">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="text-sm font-medium text-[#718096] hover:text-[#7C9A6B] transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href="https://wa.me/573000000000" class="btn-primary text-sm py-3 px-6">
+        Agendar
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden p-2 text-[#2D3748]" aria-label="Menú">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-[#FAFAF8] border-t border-[#7C9A6B]/10">
+    <div class="container-empiria py-4 flex flex-col gap-4">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="text-base font-medium text-[#718096] hover:text-[#7C9A6B] transition-colors py-2"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href="https://wa.me/573000000000" class="btn-primary text-center mt-2">
+        Agendar valoración
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+
+  // Cerrar menú al hacer click en un link
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+    });
+  });
+</script>
