@@ -1,0 +1,60 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const diferenciadores = [
+  { icon: "lucide:user-check", title: "Atención personalizada", desc: "Cada plan terapéutico se diseña a la medida. No existen dos niños iguales, ni dos tratamientos iguales." },
+  { icon: "lucide:home", title: "Acompañamiento a padres", desc: "Entregamos estrategias claras y prácticas para que el progreso continúe en casa, todos los días." },
+  { icon: "lucide:trending-up", title: "Resultados en evidencia", desc: "Evaluaciones rigurosas, intervenciones con respaldo científico y seguimiento constante del avance." },
+  { icon: "lucide:monitor", title: "Presencial y online", desc: "Atención en consultorio y terapia virtual con la misma calidad, calidez y profesionalismo." }
+];
+
+const stats = [
+  { valor: "15+", texto: "Años de experiencia" },
+  { valor: "500+", texto: "Familias atendidas" },
+  { valor: "98%", texto: "De satisfacción" }
+];
+---
+
+<section id="por-que-elegirnos" class="py-20 md:py-32 bg-secondary text-white relative overflow-hidden">
+  <!-- Decorative background -->
+  <div class="absolute top-0 right-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="absolute w-full h-full">
+      <path d="M0,0 C30,40 70,60 100,0 L100,100 L0,100 Z" fill="currentColor"></path>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">¿Por qué elegir Empiria?</h2>
+      <p class="text-lg text-slate-200">
+        Nuestro compromiso es brindar una atención ética, profesional y profundamente humana.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+      {diferenciadores.map((item, index) => (
+        <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 fade-up" style={`transition-delay: ${index * 100}ms;`}>
+          <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+            <Icon name={item.icon} class="w-7 h-7 text-white" />
+          </div>
+          <h4 class="text-xl font-bold mb-3 text-white">{item.title}</h4>
+          <p class="text-slate-200 leading-relaxed text-sm">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl fade-up delay-400">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-200">
+        {stats.map((stat) => (
+          <div class="pt-6 md:pt-0 first:pt-0">
+            <p class="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.valor}</p>
+            <p class="text-secondary font-medium uppercase tracking-wider text-sm">{stat.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

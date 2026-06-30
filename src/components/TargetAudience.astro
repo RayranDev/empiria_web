@@ -1,0 +1,57 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const publicos = [
+  { 
+    title: "Bebés y primera infancia", 
+    age: "0 a 3 años",
+    icon: "lucide:baby", 
+    desc: "Estimulación temprana, prevención, desarrollo del lenguaje y bases emocionales.",
+  },
+  { 
+    title: "Niños escolares", 
+    age: "4 a 10 años",
+    icon: "lucide:school", 
+    desc: "Lectoescritura, matemáticas, atención, conducta y adaptación escolar.",
+  },
+  { 
+    title: "Adolescentes y jóvenes", 
+    age: "11+ años",
+    icon: "lucide:user", 
+    desc: "Identidad, ansiedad, rendimiento académico, habilidades sociales y transición a la adultez.",
+  }
+];
+---
+
+<section class="py-20 md:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">A quiénes atendemos</h2>
+      <p class="text-lg text-slate-600">
+        Acompañamos cada etapa del desarrollo, adaptando nuestras metodologías a las necesidades específicas de cada edad.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {publicos.map((item, index) => (
+        <div class="flex flex-col h-full bg-surface/50 rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-up" style={`transition-delay: ${index * 150}ms;`}>
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm">
+            <Icon name={item.icon} class="w-10 h-10 text-primary" />
+          </div>
+          
+          <div class="inline-block px-3 py-1 bg-white text-secondary text-sm font-bold rounded-full mb-4 self-start border border-slate-200">
+            {item.age}
+          </div>
+          
+          <h3 class="text-2xl font-bold text-secondary mb-4">{item.title}</h3>
+          
+          <p class="text-slate-600 leading-relaxed flex-grow">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

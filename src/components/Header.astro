@@ -1,0 +1,74 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<header class="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-md border-b border-surface transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <a href="#inicio" class="font-serif text-3xl font-bold text-secondary flex items-center gap-2">
+          <span class="text-primary">E</span>mpiria
+        </a>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#inicio" class="text-slate-600 hover:text-primary transition-colors font-medium">Inicio</a>
+        <a href="#quienes-somos" class="text-slate-600 hover:text-primary transition-colors font-medium">Quiénes Somos</a>
+        <a href="#servicios" class="text-slate-600 hover:text-primary transition-colors font-medium">Servicios</a>
+        <a href="#metodologia" class="text-slate-600 hover:text-primary transition-colors font-medium">Metodología</a>
+      </nav>
+
+      <!-- CTA Desktop -->
+      <div class="hidden md:flex items-center">
+        <a href="#contacto" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-opacity-90 transition-all shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
+          Agendar Cita
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="flex md:hidden items-center">
+        <button id="mobile-menu-btn" class="text-secondary hover:text-primary transition-colors p-2" aria-label="Abrir menú">
+          <Icon name="lucide:menu" class="w-7 h-7"  id="menu-icon-open" />
+          <Icon name="lucide:x" class="w-7 h-7 hidden"  id="menu-icon-close" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-background border-b border-surface absolute w-full shadow-lg">
+    <div class="px-4 pt-2 pb-6 space-y-2">
+      <a href="#inicio" class="block px-3 py-3 text-slate-600 hover:text-primary hover:bg-surface rounded-lg font-medium mobile-link transition-colors">Inicio</a>
+      <a href="#quienes-somos" class="block px-3 py-3 text-slate-600 hover:text-primary hover:bg-surface rounded-lg font-medium mobile-link transition-colors">Quiénes Somos</a>
+      <a href="#servicios" class="block px-3 py-3 text-slate-600 hover:text-primary hover:bg-surface rounded-lg font-medium mobile-link transition-colors">Servicios</a>
+      <a href="#metodologia" class="block px-3 py-3 text-slate-600 hover:text-primary hover:bg-surface rounded-lg font-medium mobile-link transition-colors">Metodología</a>
+      <a href="#contacto" class="block px-3 py-3 mt-4 text-center bg-primary text-white rounded-lg font-medium mobile-link shadow-sm">Agendar Cita</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (btn && menu && iconOpen && iconClose) {
+      const toggleMenu = () => {
+        menu.classList.toggle('hidden');
+        iconOpen.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+      };
+
+      btn.addEventListener('click', toggleMenu);
+      
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+      });
+    }
+  });
+</script>

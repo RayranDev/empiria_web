@@ -1,0 +1,68 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section id="inicio" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-surface">
+  <!-- Decorative blobs -->
+  <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-accent/10 blur-3xl"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div class="max-w-2xl fade-up">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-white/40 mb-6 text-sm font-medium text-secondary shadow-sm">
+          <Icon name="lucide:star" class="w-4 h-4 text-accent"  fill="currentColor" />
+          <span>Atención psicológica y educativa</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          Transformamos las dificultades en <span class="text-primary">oportunidades de crecimiento</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
+          Empiria es un centro de terapia psicológica y educativa especializado en acompañar a niños, adolescentes y familias con un enfoque científico y humano.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/573001234567?text=Hola,%20quisiera%20agendar%20una%20valoraci%C3%B3n%20gratuita." target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-8 py-4 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Agendar valoración gratuita
+          </a>
+          <a href="#servicios" class="inline-flex justify-center items-center px-8 py-4 bg-white text-secondary font-medium rounded-full border border-slate-200 hover:border-primary/30 hover:bg-slate-50 transition-all">
+            Conoce nuestros servicios
+          </a>
+        </div>
+        
+        <div class="mt-10 flex items-center gap-6 text-sm text-slate-500 font-medium">
+          <div class="flex items-center gap-2">
+            <Icon name="lucide:shield-check" class="w-5 h-5 text-primary" />
+            <span>Basado en evidencia</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <Icon name="lucide:shield-check" class="w-5 h-5 text-primary" />
+            <span>Acompañamiento familiar</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image Content -->
+      <div class="relative fade-up" style="transition-delay: 200ms;">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sesión de terapia infantil profesional" class="w-full h-[500px] object-cover" loading="eager" />
+          <div class="absolute inset-0 bg-secondary/5 mix-blend-multiply"></div>
+        </div>
+        
+        <!-- Badge Flotante -->
+        <div class="absolute -bottom-6 -left-6 md:-left-10 bg-white p-5 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 4s;">
+          <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+            <span class="text-accent font-bold text-xl">15+</span>
+          </div>
+          <div>
+            <p class="font-bold text-secondary text-sm">Años de</p>
+            <p class="text-slate-500 text-sm">Experiencia clínica</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

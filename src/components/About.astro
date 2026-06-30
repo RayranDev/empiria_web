@@ -1,0 +1,65 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section id="quienes-somos" class="py-20 md:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <!-- Image Column -->
+      <div class="relative fade-up">
+        <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dra. Elena Villamizar - Directora Clínica" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <!-- Decorative elements -->
+        <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-surface rounded-full -z-10"></div>
+        <div class="absolute -top-8 -left-8 w-24 h-24 bg-primary/20 rounded-full blur-xl -z-10"></div>
+      </div>
+      
+      <!-- Content Column -->
+      <div class="fade-up" style="transition-delay: 200ms;">
+        <h2 class="text-3xl md:text-4xl font-bold mb-2">Dra. Elena Villamizar</h2>
+        <p class="text-primary font-medium text-lg mb-6">Directora Clínica y Fundadora</p>
+        
+        <div class="flex items-center gap-2 mb-8 inline-flex px-4 py-2 bg-surface text-secondary text-sm font-medium rounded-lg">
+          <Icon name="lucide:award" class="w-5 h-5 text-accent" />
+          <span>Psicóloga Clínica | Colegiada No. 45892</span>
+        </div>
+        
+        <div class="space-y-5 text-slate-600 leading-relaxed mb-10 text-lg">
+          <p>
+            Con más de 15 años de experiencia, mi objetivo siempre ha sido brindar un espacio seguro donde los niños y adolescentes puedan descubrir sus fortalezas y superar sus desafíos de aprendizaje y emocionales.
+          </p>
+          <p>
+            En Empiria creemos firmemente que no existen dos niños iguales ni tratamientos estandarizados. Por ello, combinamos intervenciones con sólido respaldo científico y una profunda calidez humana, diseñando planes a medida que respetan el ritmo de cada paciente.
+          </p>
+          <p>
+            Sabemos que el entorno familiar es clave. Nuestro enfoque incluye un acompañamiento constante a los padres, entregando herramientas prácticas para que el progreso continúe en casa y en el colegio.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <Icon name="lucide:book-open" class="w-6 h-6 text-primary" />
+            </div>
+            <div>
+              <h4 class="font-bold text-secondary text-lg">Basado en Ciencia</h4>
+              <p class="text-sm text-slate-500 mt-1">Evaluaciones e intervenciones con validación clínica.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <Icon name="lucide:heart" class="w-6 h-6 text-accent" />
+            </div>
+            <div>
+              <h4 class="font-bold text-secondary text-lg">Acompañamiento</h4>
+              <p class="text-sm text-slate-500 mt-1">Empatía y contención constante a la familia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
