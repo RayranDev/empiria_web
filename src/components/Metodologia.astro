@@ -1,0 +1,76 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const pasos = [
+  {
+    icon: 'lucide:search',
+    titulo: 'Valoración Integral',
+    descripcion: 'Evaluación exhaustiva de las habilidades comunicativas y de aprendizaje.'
+  },
+  {
+    icon: 'lucide:file-text',
+    titulo: 'Diseño de Plan',
+    descripcion: 'Creación de un programa terapéutico 100% personalizado según los resultados.'
+  },
+  {
+    icon: 'lucide:activity',
+    titulo: 'Intervención Dinámica',
+    descripcion: 'Sesiones lúdicas y estructuradas basadas en evidencia científica.'
+  },
+  {
+    icon: 'lucide:line-chart',
+    titulo: 'Monitoreo Constante',
+    descripcion: 'Evaluación continua de progresos con reportes detallados para la familia y el colegio.'
+  }
+];
+---
+
+<section id="metodologia" class="section-padding bg-[#FAFAF8] relative overflow-hidden">
+  <!-- Forma de fondo -->
+  <div class="absolute top-1/2 left-0 transform -translate-y-1/2 w-96 h-96 bg-[#7C9A6B]/5 rounded-full blur-3xl -z-10"></div>
+
+  <div class="container-empiria">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      
+      <!-- Textos -->
+      <div>
+        <span class="text-[#C17A5F] text-sm font-semibold uppercase tracking-wider">Metodología</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#2D3748] mt-3 mb-6">
+          Un proceso estructurado para resultados reales
+        </h2>
+        <p class="text-[#718096] text-lg mb-8 leading-relaxed">
+          Nuestra metodología de 4 pasos garantiza un abordaje sistemático, medible y transparente. Acompañamos a tu hijo desde el diagnóstico hasta el alta, trabajando en conjunto con la familia y la institución educativa.
+        </p>
+        <a href="https://wa.me/573000000000?text=Hola,%20quiero%20conocer%20más%20sobre%20el%20proceso%20de%20valoración" class="btn-primary">
+          Inicia el proceso hoy
+        </a>
+      </div>
+
+      <!-- Timeline -->
+      <div class="relative">
+        <!-- Línea conectora -->
+        <div class="absolute left-8 top-8 bottom-8 w-1 bg-[#7C9A6B]/20 hidden md:block rounded-full"></div>
+        
+        <div class="space-y-10 relative">
+          {pasos.map((paso, index) => (
+            <div class="flex flex-col md:flex-row gap-6 relative group">
+              <!-- Círculo e Icono -->
+              <div class="w-16 h-16 bg-white border-2 border-[#7C9A6B] rounded-full flex items-center justify-center flex-shrink-0 z-10 shadow-sm group-hover:bg-[#7C9A6B] group-hover:border-[#7C9A6B] transition-colors duration-300 relative">
+                <span class="absolute -top-2 -right-2 w-6 h-6 bg-[#C17A5F] text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">
+                  {index + 1}
+                </span>
+                <Icon name={paso.icon} class="w-7 h-7 text-[#7C9A6B] group-hover:text-white transition-colors duration-300" />
+              </div>
+              
+              <!-- Contenido del paso -->
+              <div class="bg-white p-6 rounded-2xl shadow-sm border border-[#7C9A6B]/10 flex-1 group-hover:shadow-md transition-shadow duration-300">
+                <h3 class="text-xl font-bold text-[#2D3748] mb-2">{paso.titulo}</h3>
+                <p class="text-[#718096]">{paso.descripcion}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
