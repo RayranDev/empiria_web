@@ -1,5 +1,6 @@
 ---
 import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -67,5 +68,6 @@ const {
   <body class="bg-[#FAFAF8] text-[#2D3748] antialiased">
     <Navbar />
     <slot />
+    <Footer />
   </body>
 </html>

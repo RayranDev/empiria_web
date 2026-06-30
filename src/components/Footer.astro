@@ -1,85 +1,80 @@
 ---
 import { Icon } from 'astro-icon/components';
-const year = new Date().getFullYear();
 ---
 
-<footer class="bg-secondary text-white pt-20 pb-10 border-t-4 border-primary">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
+<footer class="bg-[#2D3748] text-white pt-20 pb-10 border-t border-[#7C9A6B]/20">
+  <div class="container-empiria">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
       
-      <!-- Columna 1: Marca y Redes -->
-      <div class="lg:col-span-1">
-        <a href="#inicio" class="font-serif text-3xl font-bold mb-6 block">
-          <span class="text-primary">E</span>mpiria
+      <!-- Columna 1: Marca -->
+      <div>
+        <a href="#inicio" class="text-3xl font-serif font-bold text-white mb-6 inline-block">
+          Empiria
         </a>
-        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-          Centro de terapia psicológica y educativa enfocado en potenciar el desarrollo integral de niños, adolescentes y sus familias.
+        <p class="text-[#A0AEC0] leading-relaxed mb-6">
+          Centro especializado en evaluación y terapia de fonoaudiología y aprendizaje. Transformamos barreras en éxito.
         </p>
-        <div class="flex space-x-4">
-          <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" aria-label="Instagram">
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C17A5F] transition-colors" aria-label="Instagram">
             <Icon name="lucide:instagram" class="w-5 h-5" />
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" aria-label="Facebook">
+          <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C17A5F] transition-colors" aria-label="Facebook">
             <Icon name="lucide:facebook" class="w-5 h-5" />
-          </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white" aria-label="LinkedIn">
-            <Icon name="lucide:linkedin" class="w-5 h-5" />
           </a>
         </div>
       </div>
 
       <!-- Columna 2: Enlaces Rápidos -->
       <div>
-        <h4 class="text-lg font-bold mb-6 font-serif">Enlaces Rápidos</h4>
-        <ul class="space-y-3">
-          <li><a href="#inicio" class="text-slate-300 hover:text-white transition-colors text-sm">Inicio</a></li>
-          <li><a href="#quienes-somos" class="text-slate-300 hover:text-white transition-colors text-sm">Quiénes Somos</a></li>
-          <li><a href="#servicios" class="text-slate-300 hover:text-white transition-colors text-sm">Servicios</a></li>
-          <li><a href="#por-que-elegirnos" class="text-slate-300 hover:text-white transition-colors text-sm">Por qué elegirnos</a></li>
-          <li><a href="#metodologia" class="text-slate-300 hover:text-white transition-colors text-sm">Metodología</a></li>
+        <h3 class="text-lg font-bold mb-6 text-white/90">Enlaces Rápidos</h3>
+        <ul class="space-y-4">
+          <li><a href="#inicio" class="text-[#A0AEC0] hover:text-[#7C9A6B] transition-colors">Inicio</a></li>
+          <li><a href="#quienes-somos" class="text-[#A0AEC0] hover:text-[#7C9A6B] transition-colors">Quiénes Somos</a></li>
+          <li><a href="#servicios" class="text-[#A0AEC0] hover:text-[#7C9A6B] transition-colors">Servicios</a></li>
+          <li><a href="#metodologia" class="text-[#A0AEC0] hover:text-[#7C9A6B] transition-colors">Metodología</a></li>
         </ul>
       </div>
 
-      <!-- Columna 3: Contacto -->
-      <div class="lg:col-span-2">
-        <h4 class="text-lg font-bold mb-6 font-serif">Información de Contacto</h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3 text-slate-300 text-sm">
-              <Icon name="lucide:map-pin" class="w-5 h-5 text-primary shrink-0" />
-              <span>Calle Ficticia 123, Consultorio 405<br/>Bogotá, Colombia</span>
-            </li>
-            <li class="flex items-center gap-3 text-slate-300 text-sm">
-              <Icon name="lucide:phone" class="w-5 h-5 text-primary shrink-0" />
-              <span>+57 300 123 4567</span>
-            </li>
-          </ul>
-          <ul class="space-y-4">
-            <li class="flex items-center gap-3 text-slate-300 text-sm">
-              <Icon name="lucide:mail" class="w-5 h-5 text-primary shrink-0" />
-              <span>contacto@empiria-terapia.com</span>
-            </li>
-            <li class="flex items-start gap-3 text-slate-300 text-sm">
-              <Icon name="lucide:clock" class="w-5 h-5 text-primary shrink-0" />
-              <span>Lunes a Viernes: 8:00 AM - 7:00 PM<br/>Sábados: 9:00 AM - 1:00 PM</span>
-            </li>
-          </ul>
-        </div>
+      <!-- Columna 3: Servicios -->
+      <div>
+        <h3 class="text-lg font-bold mb-6 text-white/90">Intervenciones</h3>
+        <ul class="space-y-4">
+          <li class="text-[#A0AEC0]">Terapia de Lenguaje</li>
+          <li class="text-[#A0AEC0]">Lectoescritura</li>
+          <li class="text-[#A0AEC0]">Dislexia y Disgrafía</li>
+          <li class="text-[#A0AEC0]">Estimulación Temprana</li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Contacto -->
+      <div>
+        <h3 class="text-lg font-bold mb-6 text-white/90">Contacto</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <Icon name="lucide:map-pin" class="w-5 h-5 text-[#7C9A6B] mt-1 shrink-0" />
+            <span class="text-[#A0AEC0]">Bogotá, Colombia<br>Atención presencial y online</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <Icon name="lucide:phone" class="w-5 h-5 text-[#7C9A6B] shrink-0" />
+            <a href="https://wa.me/573000000000" class="text-[#A0AEC0] hover:text-white transition-colors">+57 300 000 0000</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <Icon name="lucide:mail" class="w-5 h-5 text-[#7C9A6B] shrink-0" />
+            <a href="mailto:contacto@empiria.com" class="text-[#A0AEC0] hover:text-white transition-colors">contacto@empiria.com</a>
+          </li>
+        </ul>
       </div>
 
     </div>
 
-    <!-- Legal Footer -->
     <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-slate-400 text-sm text-center md:text-left">
-        &copy; {year} Empiria Centro Terapéutico. Todos los derechos reservados.
+      <p class="text-[#A0AEC0] text-sm">
+        &copy; {new Date().getFullYear()} Empiria. Todos los derechos reservados.
       </p>
-      <div class="flex space-x-6 text-sm text-slate-400">
-        <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
-        <a href="#" class="hover:text-white transition-colors">Aviso Legal</a>
+      <div class="flex gap-4 text-sm text-[#A0AEC0]">
+        <a href="#" class="hover:text-white transition-colors">Términos de servicio</a>
+        <a href="#" class="hover:text-white transition-colors">Política de privacidad</a>
       </div>
     </div>
-
   </div>
 </footer>
